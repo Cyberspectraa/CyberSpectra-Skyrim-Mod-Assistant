@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up pnpm and Node.js
+        uses: pnpm/setup@v2
+        with:
+          version: 11.10.0
+          runtime: node@24.20.0
+          cache: true
+          install: true
+
+      - name: Run first domain test
+        run: pnpm test -- tests/core/stateMachine.test.ts

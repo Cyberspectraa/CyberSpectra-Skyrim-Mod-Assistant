@@ -1,0 +1,26 @@
+{
+  "name": "cyberspectra-skyrim-mod-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Skyrim-first Vortex extension that assists with Nexus collection downloads without bypassing Nexus access controls.",
+  "author": "CyberSpectra",
+  "license": "GPL-3.0-only",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "packageManager": "pnpm@11.10.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@nexusmods/vortex-api": "2.7.0-beta.1",
+    "@types/node": "24.12.2",
+    "rolldown": "1.1.4",
+    "typescript": "6.0.3",
+    "vitest": "4.1.9"
+  }
+}
